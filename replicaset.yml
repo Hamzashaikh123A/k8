@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx-replicaset
+  name: rpc-app
 spec:
   replicas: 4  
   selector:
     matchLabels:
-      app: nginx
+      app: rpc-app
   template:
     metadata:
       labels:
