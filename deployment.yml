@@ -1,16 +1,20 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deploy
+  name: my-deployment
 spec:
-  replicas: 6 
+  replicas: 6 # Set the desired number of replicas
+
+  # Define the pod template for replicas
   template:
     metadata:
       labels:
-        app: app-deploy
+        app: nginx # Labels for pods managed by deployment
     spec:
       containers:
       - name: nginx
-        image: nginx:latest 
+        image: nginx:latest
         ports:
-        - containerPort: 80 
+        - containerPort: 80
+      
