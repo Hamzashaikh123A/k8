@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: stateful-set
+  name: stateful
 spec:
   replicas: 4  # Deploy four replicas for high availability
   selector:
