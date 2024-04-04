@@ -18,20 +18,4 @@ spec:
         image: mysql:latest
         ports:
         - containerPort: 3306
-        volumeMounts:
-        - name: mysql-data
-          mountPath: /var/lib/mysql
-      initContainers:
-      - name: init-mysql
-        image: busybox:latest
-        command: ['sh', '-c', 'sleep 10 && mysqld --initialize-insecure']
-      volumeClaimTemplates:
-      - metadata:
-          name: mysql-data
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 1Gi  # Adjust storage request based on your needs
-          persistentVolumeClaim:
-            claimName: mysql-pvc
+        
