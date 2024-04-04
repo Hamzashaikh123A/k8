@@ -7,15 +7,15 @@ spec:
   replicas: 4  # Deploy four replicas for high availability
   selector:
     matchLabels:
-      app: mysql
+      app: nginx
   template:
     metadata:
       labels:
-        app: mysql
+        app: nginx
     spec:
       containers:
-      - name: mysql
-        image: mysql:latest
+      - name: nginx
+        image: nginx:latest
         ports:
-        - containerPort: 3306
+        - containerPort: 80
         
