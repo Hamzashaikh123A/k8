@@ -1,8 +1,8 @@
 
 apiVersion: apps/v1
-kind: Daemon-set
+kind: DaemonSet
 metadata:
-  name: daeomn-set
+  name: daeomen-set
 spec: 
   selector:
     matchLabels:
